@@ -182,11 +182,31 @@
         <select id="languageSelect" onchange="updateUI()">
             <option value="" selected disabled>Veldu tungumál...</option>
             <option value="ar">Arabíska – العربية</option>
+            <option value="be">Belgíska (Flæmska) – Vlaams</option>
             <option value="da">Danska – Dansk</option>
             <option value="en">Enska – English</option>
             <option value="tl">Filippseyska – Tagalog</option>
+            <option value="fi">Finnska – Suomi</option>
+            <option value="fr">Franska – Français</option>
+            <option value="fo">Færeyska – Føroyskt</option>
+            <option value="kl">Grænlenska – Kalaallisut</option>
+            <option value="nl">Hollenska – Nederlands</option>
+            <option value="it">Ítalska – Italiano</option>
+            <option value="ja">Japanska – 日本語</option>
+            <option value="zh">Kínverska – 中文</option>
+            <option value="ku">Kúrdíska – Kurdî</option>
+            <option value="lv">Lettneska – Latviešu</option>
+            <option value="lt">Litháíska – Lietuvių</option>
+            <option value="no">Norska – Norsk</option>
+            <option value="fa">Persneska – فارسی</option>
+            <option value="pt">Portúgalska – Português</option>
             <option value="pl">Pólska – Polski</option>
+            <option value="ro">Rúmenska – Română</option>
+            <option value="ru">Rússneska – Русский</option>
             <option value="es">Spænska – Español</option>
+            <option value="sv">Sænska – Svenska</option>
+            <option value="th">Tælenska – ภาษาไทย</option>
+            <option value="de">Þýska – Deutsch</option>
             <option value="uk">Úkraínska – Українська</option>
             <option value="vi">Víetnamska – Tiếng Việt</option>
         </select>
@@ -221,11 +241,10 @@ const exerciseData = [
         is_exp: "<b>Útskýring:</b> (Ábendingarfornafn) Þágufall af orðinu 'þessi' eða 'þetta'. Vísar til einhvers sem er nálægt eða var verið að tala um.<br><br><b>Dæmi:</b> Ég er hrifinn af <b>þessu</b> húsi.",
         translations: {
             "en": "<b>Explanation:</b> (Demonstrative pronoun) Dative case of 'this'. Refers to something nearby or just mentioned.<br><b>Example:</b> I like <b>this</b> house.",
-            "pl": "<b>Wyjaśnienie:</b> (Zaimek wskazujący) Celownik od słowa 'to/ten'. Wskazuje na coś w pobliżu.<br><b>Przykład:</b> Podoba mi się <b>ten</b> dom (to mieszkanie).",
+            "pl": "<b>Wyjaśnienie:</b> (Zaimek wskazujący) Celownik od słowa 'to/ten'. Wskazuje na coś w pobliżu.<br><b>Przykład:</b> Podoba mi się <b>ten</b> dom.",
             "da": "<b>Forklaring:</b> (Påpegende stedord) Dativ af 'dette/denne'. Refererer til noget tæt på.<br><b>Eksempel:</b> Jeg kan lide <b>dette</b> hus.",
             "es": "<b>Explicación:</b> (Pronombre demostrativo) Caso dativo de 'esto/este'.<br><b>Ejemplo:</b> Me gusta <b>esta</b> casa.",
-            "ar": "<div dir='rtl'><b>الشرح:</b> (اسم إشارة) حالة الجر لكلمة 'هذا'.<br><b>مثال:</b> أنا معجب بـ <b>هذا</b> المنزل.</div>",
-            "uk": "<b>Пояснення:</b> (Вказівний займенник) Давальний відмінок від 'цей/це'.<br><b>Приклад:</b> Мені подобається <b>цей</b> будинок."
+            "ar": "<div dir='rtl'><b>الشرح:</b> (اسم إشارة) حالة الجر لكلمة 'هذا'.<br><b>مثال:</b> أنا معجب بـ <b>هذا</b> المنزل.</div>"
         }
     },
     { 
@@ -399,11 +418,31 @@ function findNextUnfinished() {
             <select id="languageSelect" onchange="updateUI()">
                 <option value="" selected disabled>Veldu tungumál...</option>
                 <option value="ar">Arabíska – العربية</option>
+                <option value="be">Belgíska (Flæmska) – Vlaams</option>
                 <option value="da">Danska – Dansk</option>
                 <option value="en">Enska – English</option>
                 <option value="tl">Filippseyska – Tagalog</option>
+                <option value="fi">Finnska – Suomi</option>
+                <option value="fr">Franska – Français</option>
+                <option value="fo">Færeyska – Føroyskt</option>
+                <option value="kl">Grænlenska – Kalaallisut</option>
+                <option value="nl">Hollenska – Nederlands</option>
+                <option value="it">Ítalska – Italiano</option>
+                <option value="ja">Japanska – 日本語</option>
+                <option value="zh">Kínverska – 中文</option>
+                <option value="ku">Kúrdíska – Kurdî</option>
+                <option value="lv">Lettneska – Latviešu</option>
+                <option value="lt">Litháíska – Lietuvių</option>
+                <option value="no">Norska – Norsk</option>
+                <option value="fa">Persneska – فارسی</option>
+                <option value="pt">Portúgalska – Português</option>
                 <option value="pl">Pólska – Polski</option>
+                <option value="ro">Rúmenska – Română</option>
+                <option value="ru">Rússneska – Русский</option>
                 <option value="es">Spænska – Español</option>
+                <option value="sv">Sænska – Svenska</option>
+                <option value="th">Tælenska – ภาษาไทย</option>
+                <option value="de">Þýska – Deutsch</option>
                 <option value="uk">Úkraínska – Українська</option>
                 <option value="vi">Víetnamska – Tiếng Việt</option>
             </select>
@@ -475,7 +514,8 @@ function updateUI() {
     if (!selectedLang) {
         document.getElementById('media-box').innerHTML = "<i>Veldu tungumál úr listanum að ofan til að sjá þýðingu.</i>";
     } else {
-        document.getElementById('media-box').innerHTML = curr.translations[selectedLang] || (curr.translations['en'] + "<br><i>(Translation for this language missing - showing English)</i>");
+        // Birtir valda þýðingu EF hún er til, annars birtir það ensku þýðinguna sem varalið svo forritið brotni ekki
+        document.getElementById('media-box').innerHTML = curr.translations[selectedLang] || (curr.translations['en'] + "<br><br><i>(Ath: Þýðingu á þessu tungumáli vantar, sýni ensku)</i>");
     }
 
     const savedScore = userScores[currentIndex];
